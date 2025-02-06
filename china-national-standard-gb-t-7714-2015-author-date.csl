@@ -17,7 +17,7 @@
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>The Chinese GB/T 7714-2015 author-date style</summary>
-    <updated>2024-01-22T23:27:33+08:00</updated>
+    <updated>2024-09-18T20:42:19+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="zh">
@@ -49,7 +49,7 @@
   <macro name="author">
     <names variable="author">
       <name>
-        <name-part name="family" text-case="uppercase"/>
+        <name-part name="family" text-case="capitalize-first"/>
       </name>
       <!-- <institution/> -->
       <substitute>
@@ -68,7 +68,7 @@
   <!-- 正文中的引用，对中国著者标注第一著者的姓名 -->
   <macro name="author-intext">
     <names variable="author">
-      <name form="short"/>
+      <name form="short" text-case="capitalize-first"/>
       <!-- 国标 10.2.2 节要求姓氏与“et al.”“等”之间留适当空隙 -->
       <substitute>
         <names variable="composer"/>
@@ -211,7 +211,7 @@
   <macro name="secondary-contributors">
     <names variable="translator">
       <name>
-        <name-part name="family" text-case="uppercase"/>
+        <name-part name="family" text-case="capitalize-first"/>
       </name>
       <!-- <institution/> -->
       <label form="short" prefix=", "/>
@@ -221,7 +221,7 @@
   <macro name="container-contributors">
     <names variable="editor">
       <name>
-        <name-part name="family" text-case="uppercase"/>
+        <name-part name="family" text-case="capitalize-first"/>
       </name>
       <!-- <institution/> -->
       <substitute>
@@ -382,7 +382,7 @@
   <macro name="access">
     <group delimiter=". ">
       <text variable="URL"/>
-      <text variable="DOI" prefix="DOI:"/>
+      <!-- 移除DOI的显示 -->
     </group>
   </macro>
   <!-- 参考文献表格式 -->
